@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main { 
 
- public static void main(String[] args){ 
+ final static void main(String[] args){ 
 
  float logLength = 0; 
 
