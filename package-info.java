@@ -5,4 +5,4 @@
 * @version 1.0
 * @since   2021-12-14
 */
-package ca.mths.ics4u
+package ca.mths.ics4u;
