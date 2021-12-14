@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Main {
 
- public static void main(String[] args) {
+ public static void main(String[] args){
 
  float logLength = 0;
 
@@ -27,11 +27,11 @@ public class Main {
 
  System.out.print("Enter the length of the logs for this load: ");
 
- logLength = myInput.nextFloat();  //get length of log
+ logLength = myInput.nextFloat () ;  //get length of log
 
- totalLogs = maxMeterLogs/logLength;   // Using log length calculate maximum capacity.
+ totalLogs = maxMeterLogs / logLength;   // Using log length calculate maximum capacity.
 
- System.out.println("Total number of logs this truck can carry = "+ totalLogs);
+ System.out.println ("Total number of logs this truck can carry = " + totalLogs);
 
  }
 
