@@ -21,7 +21,7 @@ public class Main {
 
  int maxTruckLoad = 1100; //1100 kg per truck
 
- float maxMeterLogs = maxTruckLoad / logWeightPerMeter;//Maximum number of meters per load
+ float maxMeterLogs = maxTruckLoad / logWeightPerMeter; //Maximum number of meters per load
 
  Scanner myInput = new Scanner (System.in);  //define instance of Scanner for input
 
@@ -29,7 +29,7 @@ public class Main {
 
  logLength = myInput.nextFloat(); //get length of log
 
- totalLogs = maxMeterLogs / logLength; // Using log length calculate maximum capacity.
+ totalLogs = maxMeterLogs / logLength; //Using loglength calculate max capacity.
 
  System.out.println("Total number of logs this truck can carry = " + totalLogs); 
 
