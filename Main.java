@@ -1,4 +1,4 @@
-/**
+/*
 * The "Hello Word!" program, just proves you can show print to terminal.
 *
 * @author  Darien R-H
@@ -6,33 +6,61 @@
 * @since   2021-12-14
 */
 
-
 import java.util.Scanner;
 
-public class Main { 
+/**
+* This is a program that blanks.
+*/
+final class Main {
 
- final static void main(String[] args){ 
+    /**
+    * 20kg per meter.
+    */
+    public static final float LOGWEIGHTPERMETER = 20;
+    /**
+    * Maximum weight per truck.
+    */
+    public static final float MAXLOADTRUCK = 1100;
 
- float logLength = 0; 
 
- float totalLogs = 0; 
+    /**
+    * Prevent instantiation.
+    * Throw an exception IllegalStateException.
+    * if this ever is called
+    *
+    * @throws IllegalStateException
+    *
+    */
+    private Main() {
+        throw new IllegalStateException("Cannot be instantiated");
+    }
 
- int logWeightPerMeter = 20; //20 kg per meter
+    /**
+    * The starting main() function.
+    *
+    * @param args No args will be used
+    */
+    public static void main(final String[] args) {
+        // variables
+        final float logLength;
+        final float totalLogs;
 
- int maxTruckLoad = 1100; //1100 kg per truck
+        // Block of code to try
+        try {
+          final Scanner userInput = new Scanner(System.in);
+          System.out.print("Enter the length of the logs for this load: "); 
 
- float maxMeterLogs = maxTruckLoad / logWeightPerMeter; //Maximum number of meters per load
+          logLength = userInput.nextFloat(); //get length of log
 
- Scanner myInput = new Scanner (System.in);  //define instance of Scanner for input
+          totalLogs = MAXLOADTRUCK / logLength / LOGWEIGHTPERMETER;
 
- System.out.print("Enter the length of the logs for this load: "); 
+          System.out.println("Total number of logs this truck can carry = " + totalLogs);
 
- logLength = myInput.nextFloat(); //get length of log
+        } catch (java.util.InputMismatchException errorCode) {
+        // Block of code to handle errors
+                System.out.println("\nYou have not entered a valid input.");
+        }
 
- totalLogs = maxMeterLogs / logLength; //Using loglength calculate max capacity.
-
- System.out.println("Total number of logs this truck can carry = " + totalLogs); 
-
- }
-
+        System.out.println("\nDone.");
+    }
 }
