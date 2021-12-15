@@ -48,13 +48,14 @@ final class Main {
         // Block of code to try
         try {
           final Scanner userInput = new Scanner(System.in);
-          System.out.print("Enter the length of the logs for this load: "); 
+          System.out.print("Enter the length of the logs for this load: ");
 
           logLength = userInput.nextFloat(); //get length of log
 
           totalLogs = MAXLOADTRUCK / logLength / LOGWEIGHTPERMETER;
 
-          System.out.println("Total number of logs this truck can carry = " + totalLogs);
+          System.out.println("Total number of logs this truck can carry = "
+            + totalLogs);
 
         } catch (java.util.InputMismatchException errorCode) {
         // Block of code to handle errors
